@@ -2,7 +2,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-
+import {
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+  } from "@/components/ui/hover-card"
+import { generatorsets } from './genetatorSets'
+import { Separator } from '../ui/separator'
+  
 const Navbar = () => {
     const [scroll, setscroll] = useState(0)
     useEffect(() => {
@@ -25,7 +32,18 @@ const Navbar = () => {
               <Link href="/">Company Profile</Link>
             </li>
             <li>
-              <Link href="/">Generator Sets</Link>
+            <HoverCard closeDelay={100} openDelay={0}>
+            <HoverCardTrigger>Generator Sets</HoverCardTrigger>
+            <HoverCardContent className='mt-3 bg-primary ring-theme/90 text-white'>
+                <ul>
+                {generatorsets.map((v,i)=> <li className='my-2' key={i}>
+                    <Link href={v.link}>{v.title}</Link>
+                    {i!==generatorsets.length-1&&<Separator orientation='horizontal' className=' bg-gray-400 my-2'/>}
+                </li>)}
+                </ul>
+            </HoverCardContent>
+            </HoverCard>
+          
             </li>
             <li>
                 <Link href="/">SYNCHRON SYSTEM</Link>
