@@ -79,7 +79,7 @@ const Navbar = () => {
         </div>
         <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60'>Request a Quote</Button>
     </div>
-    <div onClick={()=> window.scrollTo({top:0,behavior:'smooth'})} className={`rounded-full ${scroll<700?'opacity-0 mt-10':'opacity-100'} z-50 transition-all ease-in-out duration-300 hover:bg-white cursor-pointer fixed bottom-5 border border-red-400 h-10 w-10 flex items-center justify-center right-5`}>
+    <div onClick={()=> window.scrollTo({top:0,behavior:'smooth'})} className={`rounded-full ${scroll<500?'opacity-0 mt-10':'opacity-100'} z-50 transition-all ease-in-out duration-300 hover:bg-white cursor-pointer fixed bottom-5 border border-red-400 h-10 w-10 flex items-center justify-center right-5`}>
       <ChevronUp height={20} className='stroke-red-400'/>
     </div>
     </>
