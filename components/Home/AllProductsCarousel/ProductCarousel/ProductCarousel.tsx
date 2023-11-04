@@ -3,6 +3,7 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import ProductCard from './ProductCard/ProductCard';
+import { Controller,A11y,Navigation } from 'swiper/modules';
 const ProductCarousel = () => {
   return (
     <Swiper
@@ -23,6 +24,8 @@ const ProductCarousel = () => {
           slidesPerView: 5
         },
       }}
+      navigation={true}
+      modules={[Controller,Navigation,A11y]}
   >
     <SwiperSlide>
         <ProductCard link='/' image='/maksan.jpg' brand='Perkins' title='LP6546'/>
