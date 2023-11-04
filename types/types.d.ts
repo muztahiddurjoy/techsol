@@ -8,3 +8,9 @@ export type ProductCard = {
     brand:string,
     link:string
 }
+export type ContactCard = {
+    title:string,
+    desc:string,
+    linkText:string,
+    link:string
+}
