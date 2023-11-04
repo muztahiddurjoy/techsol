@@ -34,7 +34,7 @@ const Navbar = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/">Company Profile</Link>
+              <Link href="/company-profile">Company Profile</Link>
             </li>
             <li>
             <HoverCard closeDelay={100} openDelay={0}>
@@ -48,19 +48,18 @@ const Navbar = () => {
                 </ul>
             </HoverCardContent>
             </HoverCard>
-          
             </li>
             <li>
-                <Link href="/">SYNCHRON SYSTEM</Link>
+                <Link href="/synchronization-system">SYNCHRON SYSTEM</Link>
             </li>
             <li>
-                <Link href="/">Special Project</Link>
+                <Link href="/special-project">Special Project</Link>
             </li>
             <li>
-                <Link href="/">Solar</Link>
+                <Link href="/solar">Solar</Link>
             </li>
             <li  >
-                <Link href="/">Contact</Link>
+                <Link href="/contact">Contact</Link>
             </li>
         </ul>
         <div className="flex items-center">
