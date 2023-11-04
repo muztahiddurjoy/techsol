@@ -27,7 +27,7 @@ const Navbar = () => {
     
   return (
     <>
-    <div className='absolute top-0 right-0 left-0 flex items-center px-20 py-10'>
+    <div className='absolute top-0 right-0 left-0 flex items-center px-20 py-10 z-40'>
         <Link href="/"><Image alt='Maskan' height={50} width={150} src="/white.png"/></Link>
         <ul className='md:flex items-center hidden text-xs uppercase font-medium text-white [&>*]:px-3 [&>*]:border-r [&>*]:border-gray-300 px-4 md:px-10'>
             <li>
