@@ -10,7 +10,7 @@ const SingleProduct = () => {
     <>
     <Navbar/>
     <Header/>
-    <ProductContainer/>
+    <ProductContainer link='/'/>
     <ProductDesc/>
     <Footer/>
     </>
