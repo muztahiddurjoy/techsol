@@ -13,17 +13,34 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
+  import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } from "@/components/ui/dialog"
+  
   
 import { generatorsets } from './genetatorSets'
 import { Separator } from '../ui/separator'
 import { ChevronDown, ChevronUp, Menu, Search, X } from 'lucide-react'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
+import { Textarea } from '../ui/textarea'
   
 const Navbar = () => {
     const [scroll, setscroll] = useState(0)
     const [search, setsearch] = useState('')
     const [open, setopen] = useState(false)
+    const [quoteOpen, setquoteOpen] = useState(false)
+    //quoteData
+    const [name, setname] = useState('')
+    const [company, setcompany] = useState('')
+    const [phone, setphone] = useState('')
+    const [email, setemail] = useState('')
+    const [message, setmessage] = useState('')
     useLayoutEffect(() => {
       if(typeof window!="undefined"){
         window.addEventListener('scroll',()=>{
@@ -91,7 +108,7 @@ const Navbar = () => {
             </HoverCard>
         </div>
         <div className="col-span-3 md:col-span-1 flex justify-end">
-        <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60'>Request a Quote</Button>
+        <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60' onClick={e=> setquoteOpen(true)}>Request a Quote</Button>
         </div>
     </div>
     <div className={`fixed bg-white transition-all ease-in-out duration-300 ${scroll>300?'top-0 opacity-100':'-top-20 opacity-0'} right-0 left-0 grid md:flex grid-cols-7 items-center md:px-20 md:py-5 px-3 py-3 z-40`}>
@@ -150,7 +167,7 @@ const Navbar = () => {
             </HoverCard>
         </div>
         <div className="col-span-3 md:col-span-1 flex justify-end">
-        <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60'>Request a Quote</Button>
+        <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60' onClick={e=> setquoteOpen(true)}>Request a Quote</Button>
         </div>
     </div>
     <div onClick={()=> window.scrollTo({top:0,behavior:'smooth'})} className={`rounded-full ${scroll<500?'opacity-0 mt-10':'opacity-100'} z-50 transition-all ease-in-out duration-300 hover:bg-white cursor-pointer fixed bottom-5 border border-red-400 h-10 w-10 flex items-center justify-center right-5`}>
@@ -200,6 +217,27 @@ const Navbar = () => {
         </li>
       </ul>
     </div>
+
+    <Dialog open={quoteOpen} onOpenChange={e=> setquoteOpen(p=> !p)}>
+    <DialogContent className='rounded-lg'>
+      <DialogHeader>
+        <DialogTitle className='flex items-center flex-col justify-center'>
+        <Image alt='Maskan' height={70} width={150} src="/logo.png"/>
+        <p className='text-gray-500 text-sm mt-5'>Please contact us to get information about prices and our company.</p>
+        </DialogTitle>
+        <DialogDescription className='mt-5'>
+          <Input className='rounded-full my-2 border-gray-400' placeholder='Name*' value={name} onChange={e=> setname(e.target.value)}/>
+          <Input className='rounded-full my-2 border-gray-400' placeholder='Company Name*' value={company} onChange={e=> setcompany(e.target.value)}/>
+          <Input className='rounded-full my-2 border-gray-400' placeholder='Phone*' value={phone} onChange={e=> setphone(e.target.value)}/>
+          <Input className='rounded-full my-2 border-gray-400' placeholder='Email*' value={email} onChange={e=> setemail(e.target.value)}/>
+          <Textarea rows={4} className='rounded-xl my-2 border-gray-400' placeholder='Message*' value={message} onChange={e=> setmessage(e.target.value)}/>
+          <Button className='rounded-full'>Send</Button>
+        </DialogDescription>
+      </DialogHeader>
+    </DialogContent>
+  </Dialog>
+
+
     </>
   )
 }
