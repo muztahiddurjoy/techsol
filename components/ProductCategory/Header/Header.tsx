@@ -34,7 +34,7 @@ const Header = (data:GeneratorSets) => {
   return (
     <div className="h-[50vh] md:h-[70vh] w-full bg-[url('/generator.jpg')] bg-cover relative" style={{backgroundPositionY:scroll*0.5}}>
         <div className="flex items-center justify-center flex-col absolute top-0 left-0 right-0 bottom-0 bg-black/80">
-            <Image ref={image} className='opacity-0 mt-10' src={data.image&&data.image} height={100} width={100} alt=''/>
+            <Image ref={image} className='opacity-0 mt-10' src={data.image&&data.image} height={100} width={200} alt=''/>
             <p ref={text} className='text-white mt-10 text-xl text-center opacity-0 uppercase font-bold md:text-3xl'>DIESEL GENERATOR SETS</p>
         </div>
     </div>

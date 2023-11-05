@@ -25,7 +25,7 @@ const ProductCategory = ({params}:PageProps) => {
     <>
     <Navbar/>
     <Header image={MainData.image} link={MainData.link} title={MainData.title}/>
-    <ProductContainer/>
+    <ProductContainer link={MainData.link}/>
     <Footer/>
     </>
   )
