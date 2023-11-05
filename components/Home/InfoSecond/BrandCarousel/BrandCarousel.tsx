@@ -14,6 +14,20 @@ const BrandCarousel = () => {
       autoplay={{
         delay:3000
       }}
+      breakpoints={{
+        0:{
+            slidesPerView: 2,
+        },
+        640: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        1024: {
+          slidesPerView: 5
+        },
+      }}
     >
       <SwiperSlide>
         <Image src="/google.png" height={50} width={100} alt=''/>
