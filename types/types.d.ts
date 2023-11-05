@@ -1,6 +1,7 @@
 export type GeneratorSets ={
     title:string,
-    link:string
+    link:string,
+    image?:string
 }
 export type ProductCard = {
     image:string,

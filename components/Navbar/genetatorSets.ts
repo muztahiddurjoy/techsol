@@ -1,35 +1,45 @@
 import { GeneratorSets } from "@/types/types";
 
 export const generatorsets:Array<GeneratorSets> = [{
-    link:'/',
-    title:'Lister Pitter'
+    link:'/product-category/lister-petter/',
+    title:'Lister Pitter',
+    image:'/prods/1.png'
 },
 {
-    link:'/',
-    title:'Perkins'
+    link:'/product-category/perkins/',
+    title:'Perkins',
+    image:'/prods/2.png'
 },{
-    link:'/',
-    title:'Doosan'
+    link:'/product-category/doosan/',
+    title:'Doosan',
+    image:'/prods/3.png'
 },
 {
-    link:'/',
-    title:'Baudouin'
+    link:'/product-category/baudouin/',
+    title:'Baudouin',
+    image:'/prods/4.png'
 },{
-    link:'/',
-    title:'Ricardo'
+    link:'/product-category/ricardo/',
+    title:'Ricardo',
+    image:'/prods/5.png'
 },{
-    link:'/',
-    title:'Cummins'
+    link:'/product-category/cummins/',
+    title:'Cummins',
+    image:'/prods/6.png'
 },{
-    link:'/',
-    title:'Volvo'
+    link:'/product-category/volvo/',
+    title:'Volvo',
+    image:'/prods/7.png'
 },{
-    link:'/',
-    title:'Fpt Iveco'
+    link:'/product-category/fpt-iveco/',
+    title:'Fpt Iveco',
+    image:'/prods/8.png'
 },{
-    link:'/',
-    title:'Yangdong'
+    link:'/product-category/yangdong/',
+    title:'Yangdong',
+    image:'/prods/9.png'
 },{
-    link:'/',
-    title:'Tumosan'
+    link:'/product-category/tumosan/',
+    title:'Tumosan',
+    image:'/prods/10.png'
 }]
