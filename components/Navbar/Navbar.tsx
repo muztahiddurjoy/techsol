@@ -29,6 +29,10 @@ import { ChevronDown, ChevronUp, Menu, Search, X } from 'lucide-react'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { Textarea } from '../ui/textarea'
+import { useToast } from '../ui/use-toast'
+import axios from 'axios'
+import { apiurl } from '@/apiurl'
+import { Toaster } from '../ui/toaster'
   
 const Navbar = () => {
     const [scroll, setscroll] = useState(0)
@@ -41,6 +45,7 @@ const Navbar = () => {
     const [phone, setphone] = useState('')
     const [email, setemail] = useState('')
     const [message, setmessage] = useState('')
+    const {toast} = useToast()
     useLayoutEffect(() => {
       if(typeof window!="undefined"){
         window.addEventListener('scroll',()=>{
@@ -49,6 +54,80 @@ const Navbar = () => {
         })
       }
     }, [])
+
+    const isValidEmail = (email:string) => {
+      // Regular expression for basic email validation
+      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+      return emailRegex.test(email);
+    };
+  
+    const sendMessage = ()=>{
+      if(!name){
+        toast({
+          title:'Name missing',
+          description:'Please enter your name',
+          variant:'destructive'
+        })
+      }
+      else if(!email){
+        toast({
+          title:'Email missing',
+          description:'Please enter your email',
+          variant:'destructive'
+        })
+      }
+      else if(!isValidEmail(email)){
+        toast({
+          title:'Email Invalid',
+          description:'Please enter a valid email',
+          variant:'destructive'
+        })
+      }
+      else if(!phone){
+        toast({
+          title:'Phone Number missing',
+          description:'Please enter your phone number',
+          variant:'destructive'
+        })
+      }
+      else if(!company){
+        toast({
+          title:'Company missing',
+          description:'Please enter your company name',
+          variant:'destructive'
+        })
+      }
+      else if(!message){
+        toast({
+          title:'Message missing',
+          description:'Please enter your message',
+          variant:'destructive'
+        })
+      }
+      else {
+        axios.post(`${apiurl}/contact`,{
+          companyName:company,
+          email,
+          message,
+          name,
+          phone
+        }).then((res)=>{
+          if(res.status==200){
+            setname('')
+            setemail('')
+            setcompany('')
+            setphone('')
+            setmessage('')
+            toast({
+              title:'Message Sent',
+              description:'We will contact with you soon',
+              className:'bg-green-600 text-white border-green-800'
+            })
+          }
+        })
+      }
+  
+    }
     
   return (
     <>
@@ -231,10 +310,11 @@ const Navbar = () => {
           <Input className='rounded-full my-2 border-gray-400' placeholder='Phone*' value={phone} onChange={e=> setphone(e.target.value)}/>
           <Input className='rounded-full my-2 border-gray-400' placeholder='Email*' value={email} onChange={e=> setemail(e.target.value)}/>
           <Textarea rows={4} className='rounded-xl my-2 border-gray-400' placeholder='Message*' value={message} onChange={e=> setmessage(e.target.value)}/>
-          <Button className='rounded-full'>Send</Button>
+          <Button className='rounded-full' onClick={sendMessage}>Send</Button>
         </DialogDescription>
       </DialogHeader>
     </DialogContent>
+    <Toaster/>
   </Dialog>
 
 
