@@ -1,10 +1,22 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import ProductCard from './ProductCard/ProductCard';
 import { Controller,A11y,Navigation } from 'swiper/modules';
+import { ProductType } from '@/types/types';
+import axios from 'axios';
+import { apiurl } from '@/apiurl';
 const ProductCarousel = () => {
+  const [products, setproducts] = useState<Array<ProductType>>([])
+  useEffect(() => {
+    axios.get(`${apiurl}/products`).then((res)=>{
+      if(res.status==200){
+        setproducts(res.data.result)
+      }
+    }).catch((err)=> console.log(err))
+  }, [])
+  
   return (
     <Swiper
     spaceBetween={20}
@@ -27,27 +39,13 @@ const ProductCarousel = () => {
       navigation={true}
       modules={[Controller,Navigation,A11y]}
   >
-    <SwiperSlide>
-        <ProductCard link='/' image='/maksan.jpg' brand='Perkins' title='LP6546'/>
-    </SwiperSlide>
-    <SwiperSlide>
-        <ProductCard link='/' image='/maksan.jpg' brand='Perkins' title='LP6546'/>
-    </SwiperSlide>
-    <SwiperSlide>
-        <ProductCard link='/' image='/maksan.jpg' brand='Perkins' title='LP6546'/>
-    </SwiperSlide>
-    <SwiperSlide>
-        <ProductCard link='/' image='/maksan.jpg' brand='Perkins' title='LP6546'/>
-    </SwiperSlide>
-    <SwiperSlide>
-        <ProductCard link='/' image='/maksan.jpg' brand='Perkins' title='LP6546'/>
-    </SwiperSlide>
-    <SwiperSlide>
-        <ProductCard link='/' image='/maksan.jpg' brand='Perkins' title='LP6546'/>
-    </SwiperSlide>
-    <SwiperSlide>
-        <ProductCard link='/' image='/maksan.jpg' brand='Perkins' title='LP6546'/>
-    </SwiperSlide>
+    {products.map((v,i)=> <SwiperSlide key={i}>
+        <ProductCard 
+          link={`/product/${v.id}`} 
+          image={v.image} 
+          brand={v.brand} 
+          title={v.name}/>
+    </SwiperSlide>)}
   </Swiper>
   )
 }

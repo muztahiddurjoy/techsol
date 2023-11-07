@@ -33,6 +33,7 @@ import { useToast } from '../ui/use-toast'
 import axios from 'axios'
 import { apiurl } from '@/apiurl'
 import { Toaster } from '../ui/toaster'
+import { CategoryType } from '@/types/types'
   
 const Navbar = () => {
     const [scroll, setscroll] = useState(0)
@@ -45,14 +46,17 @@ const Navbar = () => {
     const [phone, setphone] = useState('')
     const [email, setemail] = useState('')
     const [message, setmessage] = useState('')
+    const [categories, setcategories] = useState<Array<CategoryType>>([])
     const {toast} = useToast()
     useLayoutEffect(() => {
       if(typeof window!="undefined"){
         window.addEventListener('scroll',()=>{
             setscroll(window.scrollY)
-            console.log(window.screenY)
         })
       }
+      axios.get(`${apiurl}/category`).then((res)=>{
+        setcategories(res.data.result)
+      }).catch(err=> console.log(err))
     }, [])
 
     const isValidEmail = (email:string) => {
@@ -150,10 +154,10 @@ const Navbar = () => {
             <HoverCardTrigger className='flex items-center'>Generator Sets <ChevronDown height={10}/> </HoverCardTrigger>
             <HoverCardContent className='mt-3 bg-primary ring-theme/90 text-white'>
                 <ul>
-                {generatorsets.map((v,i)=> <li className='my-2' key={i}>
-                    <Link href={v.link}>{v.title}</Link>
-                    {i!==generatorsets.length-1&&<Separator orientation='horizontal' className=' bg-gray-400 my-2'/>}
-                </li>)}
+                  {categories.map((v,i)=> <li className='my-2' key={i}>
+                    <Link href={`/product-category/${v.id}`}>{v.name}</Link>
+                    {i!==categories.length-1&&<Separator orientation='horizontal' className=' bg-gray-400 my-2'/>}
+                  </li>)}
                 </ul>
             </HoverCardContent>
             </HoverCard>
