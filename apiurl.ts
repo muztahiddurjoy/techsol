@@ -1,1 +1,1 @@
-export const apiurl = "http://localhost:3455"
+export const apiurl = "https://api.techsolbd.com"

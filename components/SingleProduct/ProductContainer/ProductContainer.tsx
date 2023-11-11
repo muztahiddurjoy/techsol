@@ -1,18 +1,31 @@
+"use client"
+import { apiurl } from '@/apiurl'
 import { generatorsets } from '@/components/Navbar/genetatorSets'
 import { Button } from '@/components/ui/button'
-import { ProductType } from '@/types/types'
+import { CategoryType, ProductType } from '@/types/types'
+import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const ProductContainer = ({brand,dataSheet,image,name,brandCode}:ProductType) => {
+  const [categories, setcategories] = useState<Array<CategoryType>>([])
+  useEffect(() => {
+    axios.get(`${apiurl}/category/`).then((res)=>{
+      if(res.status==200){
+        setcategories(res.data.result)
+      }
+    }).catch((err)=>{
+      console.log(err)
+    })
+  }, [])
   return (
     <div className='grid grid-cols-1 md:grid-cols-5 md:px-20 px-5 mt-10'>
       <div className="hidden md:block">
             <p className='font-bold text-gray-600 uppercase'>PRODUCTS</p>
-            <div className="w-16 my-3 h-[3px] bg-gray-300"></div>
+            <div className="w-16 my-3 h-[3px] bg-gray-300"></div> 
             <ul>
-                {generatorsets.map((v,i)=> <li className={`my-3 text-sm ${v.link.includes('link')&&'font-bold text-black'} hover:text-black text-primary`}><Link href={v.link}>{v.title}</Link></li>)}
+            {categories.map((v,i)=> <li className={`my-3 text-sm ${v.id.includes(brandCode)&&'font-bold text-black'} hover:text-black text-primary`}><Link href={`/product-category/${v.id}`}>{v.name}</Link></li>)}
             </ul>
         </div>
         <div className="col-span-4 grid grid-cols-1 md:grid-cols-2">
