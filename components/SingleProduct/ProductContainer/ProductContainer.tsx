@@ -25,7 +25,7 @@ const ProductContainer = ({brand,dataSheet,image,name,brandCode}:ProductType) =>
             <p className='font-bold text-gray-600 uppercase'>PRODUCTS</p>
             <div className="w-16 my-3 h-[3px] bg-gray-300"></div> 
             <ul>
-            {categories.map((v,i)=> <li className={`my-3 text-sm ${v.id.includes(brandCode)&&'font-bold text-black'} hover:text-black text-primary`}><Link href={`/product-category/${v.id}`}>{v.name}</Link></li>)}
+            {categories.map((v,i)=> <li className={`my-3 text-sm ${v.id.includes(String(brandCode))&&'font-bold text-black'} hover:text-black text-primary`}><Link href={`/product-category/${v.id}`}>{v.name}</Link></li>)}
             </ul>
         </div>
         <div className="col-span-4 grid grid-cols-1 md:grid-cols-2">
