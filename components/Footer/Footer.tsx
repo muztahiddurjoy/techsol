@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className='bg-primary mt-10 relative'>
       <Triangle/>
-      <div className="absolute bg-primary px-5 md:top-44 top-20 left-0 md:px-28 grid grid-cols-1 md:grid-cols-4 md:gap-6">
+      <div className="absolute bg-primary px-5 md:top-44 lg:top-60 2xl:top-80 top-20 left-0 md:px-28 grid grid-cols-1 md:grid-cols-4 md:gap-6">
         <div className="">
           <Image src="/white.png" height={170} width={150} alt=''/>
           <p className="text-sm text-gray-300 mt-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eligendi fugiat voluptatem atque quis modi quae repudiandae sed. Consectetur minima dolores fuga iste dolor ad ut deleniti, est non suscipit.</p>

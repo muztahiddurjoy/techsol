@@ -3,7 +3,7 @@ import React from 'react'
 
 const ContactCard = ({desc,link,linkText,title}:ContactCard) => {
   return (
-    <div className='bg-white z-30 p-10 flex items-center justify-center flex-col'>
+    <div className='bg-gray-100 z-30 p-10 flex items-center justify-center flex-col'>
     <p className='font-bold text-lg text-gray-700'>{title}</p>
     <p className='text-gray-600 mt-3 text-sm font-medium text-center'>{desc}</p>
     <div className="mt-5">
