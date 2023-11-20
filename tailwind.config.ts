@@ -23,6 +23,7 @@ module.exports = {
       },
       colors: {
         textFieldGray:'#efefef',
+        themeGray:'#4C4D51',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
