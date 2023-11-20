@@ -91,12 +91,12 @@ const ContactForm = () => {
   return (
     <div className='mt-20'>
       <p className='text-center text-3xl lg:text-4xl text-primary font-bold'>Contact Form</p>
-      <div className="mt-6 md:px-44 lg:px-60 px-5">
-        <Input value={name} onChange={e=> setname(e.target.value)} placeholder='Name*' className='rounded-full border-gray-400'/>
+      <div className="mt-6 md:px-20 lg:px-60 px-5">
+        <Input value={name} onChange={e=> setname(e.target.value)} placeholder='Name*' className='rounded-full border-gray-400 bg-textFieldGray'/>
         <Input value={company} onChange={e=> setcompany(e.target.value)} placeholder='Company Name*' className='rounded-full border-gray-400 mt-4'/>
-        <Input value={phone} onChange={e=> setphone(e.target.value)} placeholder='Phone*' className='rounded-full border-gray-400 mt-4'/>
-        <Input value={email} onChange={e=> setemail(e.target.value)} placeholder='Email*' className='rounded-full border-gray-400 mt-4'/>
-        <Textarea value={message} onChange={e=> setmessage(e.target.value)} placeholder='Message*' className='rounded-xl border-gray-400 mt-4' rows={5}/>
+        <Input value={phone} onChange={e=> setphone(e.target.value)} placeholder='Phone*' className='rounded-full border-gray-400 mt-4 bg-textFieldGray'/>
+        <Input value={email} onChange={e=> setemail(e.target.value)} placeholder='Email*' className='rounded-full border-gray-400 mt-4 bg-textFieldGray'/>
+        <Textarea value={message} onChange={e=> setmessage(e.target.value)} placeholder='Message*' className='rounded-xl border-gray-400 mt-4 bg-textFieldGray' rows={5}/>
         <Button className='mt-5 rounded-full' onClick={sendMessage}>Send</Button>
       </div>
       <Toaster/>

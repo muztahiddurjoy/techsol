@@ -13,6 +13,7 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        "3xl":'1920px'
       },
     },
     extend: {
@@ -21,6 +22,7 @@ module.exports = {
         '1500':'1500ms'
       },
       colors: {
+        textFieldGray:'#efefef',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
