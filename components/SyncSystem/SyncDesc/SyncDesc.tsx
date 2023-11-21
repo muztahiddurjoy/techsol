@@ -2,7 +2,7 @@ import React from 'react'
 
 const SyncDesc = () => {
   return (
-    <div className='my-10 md:px-20 px-5 text-gray-600 [&>*]:my-5'>
+    <div className='my-10 md:px-20 2xl:px-[384px] px-5 text-gray-600 [&>*]:my-5'>
       <p className='font-bold'>Synchronization systems can simply be described as utilizing more than one generator set for your high kVA needs. Small generator sets operating in parallel offers all benefcial advantages of a single large generator set.</p>
       <p>n the investments that predict a fast growth, purchasing a high power generator at establishment period increases the first investment budget. By preferring Enmaksan Power  <b>synchronized</b> systems you can start by purchasing lower power generator which decrease first investment budget. According with the growth rate you can add generator in various numbers and powers which establish a problem free, flexible system</p>
       <p>Enmaksan Power brings alternative solution to energy projects by using synchronization systems. With combining more than one generator for your high kVA needs, this system provides significant advantages comparing against single generator with same power. Especially the <b>synchronization panel</b> that design by Enmaksan Generator engineers offers integrated solution through costumers with its technology</p>
