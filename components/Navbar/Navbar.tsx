@@ -135,7 +135,7 @@ const Navbar = () => {
     
   return (
     <>
-    <div className='absolute top-0 right-0 left-0 grid md:flex grid-cols-7 items-center md:px-20 md:py-10 px-3 py-3 z-40'>
+    <div className='absolute top-0 right-0 left-0 grid md:flex grid-cols-7 xl:justify-center items-center md:px-20 md:py-10 px-3 py-3 z-40'>
       <div className="block md:hidden" onClick={e=> setopen(true)}>
         <Menu className='stroke-white'/>
       </div>
@@ -194,7 +194,7 @@ const Navbar = () => {
         <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60' onClick={e=> setquoteOpen(true)}>Request a Quote</Button>
         </div>
     </div>
-    <div className={`fixed bg-white transition-all ease-in-out duration-300 ${scroll>300?'top-0 opacity-100':'-top-20 opacity-0'} right-0 left-0 grid md:flex grid-cols-7 items-center md:px-20 md:py-5 px-3 py-3 z-40`}>
+    <div className={`fixed bg-white transition-all ease-in-out duration-300 ${scroll>300?'top-0 opacity-100':'-top-20 opacity-0'} right-0 left-0 grid md:flex xl:justify-center grid-cols-7 items-center md:px-20 md:py-5 px-3 py-3 z-40`}>
       <div className="block md:hidden" onClick={e=> setopen(true)}>
         <Menu className='stroke-black'/>
       </div>
