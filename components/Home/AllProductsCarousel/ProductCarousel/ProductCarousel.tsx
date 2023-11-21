@@ -39,7 +39,7 @@ const ProductCarousel = () => {
       navigation={true}
       modules={[Controller,Navigation,A11y]}
   >
-    {products.map((v,i)=> <SwiperSlide key={i}>
+    {products.map((v,i)=> <SwiperSlide className='' key={i}>
         <ProductCard 
           link={`/product/${v.id}`} 
           image={v.image} 
