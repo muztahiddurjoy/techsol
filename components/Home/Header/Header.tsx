@@ -10,7 +10,7 @@ import HeaderItem from './HeaderItem/HeaderItem';
 const Header = () => {
   const [anim, setanim] = useState(0)
   return (
-    <div className=''>
+    <div>
       <Swiper
       slidesPerView={1}
       loop={true}
