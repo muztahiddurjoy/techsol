@@ -90,7 +90,7 @@ const ContactForm = () => {
   }
   return (
     <div className='mt-20 py-10 bg-[#efefef]'>
-      <p className='text-center text-3xl lg:text-4xl text-primary font-bold'>Contact Form</p>
+      <p className='text-center text-3xl font-bold'>Contact Form</p>
       <div className="mt-6 md:px-20 lg:px-60 px-5">
         <Input value={name} onChange={e=> setname(e.target.value)} placeholder='Name*' className='rounded-full border-gray-400 bg-textFieldGray'/>
         <Input value={company} onChange={e=> setcompany(e.target.value)} placeholder='Company Name*' className='rounded-full border-gray-400 mt-4'/>
