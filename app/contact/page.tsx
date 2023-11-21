@@ -12,7 +12,9 @@ const Contact = () => {
     <Navbar/>
     <Header/>
     <ContactGrid/>
+    <div className="2xl:px-[384px]">
     <ContactForm/>
+    </div>
     <ContactMap/>
     <Footer/>
     </>
