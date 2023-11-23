@@ -10,6 +10,7 @@ const Footer = () => {
   return (
     <div className="bg-themeGray mt-10 relative">
       <Triangle/>
+      
       <div className="absolute bg-[url('/map.png')] bg-cover bg-no-repeat px-5 md:top-44 lg:top-60 2xl:top-80 3xl:top-96 top-20 left-0 md:px-28 2xl:px-[360px] grid grid-cols-1 md:grid-cols-4 md:gap-6" style={{backgroundPositionY:-350}}>
         <div className="">
           <Image src="/white.png" height={170} width={150} alt=''/>
