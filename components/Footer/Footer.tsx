@@ -13,7 +13,7 @@ const Footer = () => {
       
       <div className="absolute bg-[url('/map.png')] bg-cover bg-no-repeat px-5 md:top-44 lg:top-60 2xl:top-80 3xl:top-96 top-20 left-0 md:px-28 2xl:px-[360px] grid grid-cols-1 md:grid-cols-4 md:gap-6" style={{backgroundPositionY:-350}}>
         <div className="">
-          <Image src="/white.png" height={170} width={150} className='w-[65px]' alt=''/>
+          <Image src="/white.png" height={170} width={150} alt=''/>
           <p className="text-sm text-gray-300 mt-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eligendi fugiat voluptatem atque quis modi quae repudiandae sed. Consectetur minima dolores fuga iste dolor ad ut deleniti, est non suscipit.</p>
         </div>
         <div className="md:col-span-2 md:mt-0 mt-10">

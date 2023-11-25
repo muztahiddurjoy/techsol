@@ -140,7 +140,7 @@ const Navbar = () => {
         <Menu className='stroke-white'/>
       </div>
       <div className="col-span-3 md:col-span-1 flex items-center justify-start md:justify-start">
-        <Link href="/" className='md:pl-0'><Image alt='Techsol' height={70} width={150} className='w-[45px]' src="/white.png"/></Link>
+        <Link href="/" className='md:pl-0'><Image alt='Techsol' height={70} width={150} src="/white.png"/></Link>
       </div>
         <ul className='md:flex items-center hidden text-xs uppercase font-medium text-white [&>*]:px-3 [&>*]:border-r [&>*]:border-gray-300 px-4 md:px-10'>
             <li>
@@ -194,12 +194,12 @@ const Navbar = () => {
         <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60' onClick={e=> setquoteOpen(true)}>Request a Quote</Button>
         </div>
     </div>
-    <div className={`fixed bg-white transition-all ease-in-out duration-500 ${scroll>300&&'top-0 opacity-100'} ${scroll<50?'md:py-10 opacity-0 -z-10':'md:py-2 z-40'} right-0 left-0 grid md:flex xl:justify-center grid-cols-7 items-center md:px-20  px-3 py-3`}>
+    <div className={`fixed bg-white transition-all ease-in-out duration-300 ${scroll>300&&'top-0 opacity-100'} ${scroll<50?'md:py-10 opacity-0 -z-10':'md:py-2 z-40'} right-0 left-0 grid md:flex xl:justify-center grid-cols-7 items-center md:px-20  px-3 py-3`}>
       <div className="block md:hidden" onClick={e=> setopen(true)}>
         <Menu className='stroke-black'/>
       </div>
       <div className="col-span-3 md:col-span-1 flex items-center justify-start md:justify-start">
-        <Link href="/" className='pl-0 md:pl-0'><Image alt='Maskan' height={70} width={150} className='w-[45px]' src="/logo.png"/></Link>
+        <Link href="/" className='pl-0 md:pl-0'><Image alt='Maskan' height={70} width={150} src="/logo.png"/></Link>
       </div>
         <ul className='md:flex items-center hidden text-xs uppercase font-medium text-gray-600 [&>*]:px-3 [&>*]:border-r [&>*]:border-gray-600 px-4 md:px-10'>
             <li>

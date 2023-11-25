@@ -21,7 +21,7 @@ SPECIAL</span> <br />Project</p>
         <div className="rotate-180 bottom-0 absolute left-0 right-0 -mb-0.5">
             <Triangle/>
         </div>
-        <Image src="/special.png" height={1000} width={1000} alt='' className='-bottom-10 right-0 2xl:right-32 2xl:bottom-10 absolute w-full md:w-auto px-4 md:pr-10 2xl:pr-[246px] 2xl:w-[800px] md:w-[500px] w-[350px]'/>
+        <Image src="/special.png" height={1000} width={1000} alt='' className='-bottom-10 right-0 2xl:right-32 2xl:bottom-10 absolute px-4 md:pr-10 2xl:pr-[256px] 2xl:w-[650px] md:w-[500px] w-[300px]'/>
     </div>
   )
 }
