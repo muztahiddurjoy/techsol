@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Controller,A11y,Navigation } from 'swiper/modules';
 import 'swiper/css';
 import Image from 'next/image';
 const BrandCarousel = () => {
@@ -8,6 +9,7 @@ const BrandCarousel = () => {
     <Swiper
       spaceBetween={50}
       slidesPerView={4}
+      
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
       loop={true}
