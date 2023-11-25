@@ -139,8 +139,8 @@ const Navbar = () => {
       <div className="block md:hidden" onClick={e=> setopen(true)}>
         <Menu className='stroke-white'/>
       </div>
-      <div className="col-span-3 md:col-span-1 flex items-center justify-center md:justify-start">
-        <Link href="/" className='pl-4 md:pl-0'><Image alt='Maskan' height={70} width={150} className='w-[45px]' src="/white.png"/></Link>
+      <div className="col-span-3 md:col-span-1 flex items-center justify-start md:justify-start">
+        <Link href="/" className='md:pl-0'><Image alt='Techsol' height={70} width={150} className='w-[45px]' src="/white.png"/></Link>
       </div>
         <ul className='md:flex items-center hidden text-xs uppercase font-medium text-white [&>*]:px-3 [&>*]:border-r [&>*]:border-gray-300 px-4 md:px-10'>
             <li>
@@ -194,12 +194,12 @@ const Navbar = () => {
         <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60' onClick={e=> setquoteOpen(true)}>Request a Quote</Button>
         </div>
     </div>
-    <div className={`fixed bg-white transition-all ease-in-out duration-300 ${scroll>300&&'top-0 opacity-100'} ${scroll<50?'md:py-10 opacity-0':'md:py-2'} right-0 left-0 grid md:flex xl:justify-center grid-cols-7 items-center md:px-20  px-3 py-3 z-40`}>
+    <div className={`fixed bg-white transition-all ease-in-out duration-300 ${scroll>300&&'top-0 opacity-100'} ${scroll<50?'md:py-10 opacity-0 hidden':'md:py-2'} right-0 left-0 grid md:flex xl:justify-center grid-cols-7 items-center md:px-20  px-3 py-3 z-40`}>
       <div className="block md:hidden" onClick={e=> setopen(true)}>
         <Menu className='stroke-black'/>
       </div>
-      <div className="col-span-3 md:col-span-1 flex items-center justify-center md:justify-start">
-        <Link href="/" className='pl-4 md:pl-0'><Image alt='Maskan' height={70} width={150} className='w-[45px]' src="/logo.png"/></Link>
+      <div className="col-span-3 md:col-span-1 flex items-center justify-start md:justify-start">
+        <Link href="/" className='pl-0 md:pl-0'><Image alt='Maskan' height={70} width={150} className='w-[45px]' src="/logo.png"/></Link>
       </div>
         <ul className='md:flex items-center hidden text-xs uppercase font-medium text-gray-600 [&>*]:px-3 [&>*]:border-r [&>*]:border-gray-600 px-4 md:px-10'>
             <li>
@@ -253,7 +253,7 @@ const Navbar = () => {
         <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60' onClick={e=> setquoteOpen(true)}>Request a Quote</Button>
         </div>
     </div>
-    <div onClick={()=> window.scrollTo({top:0,behavior:'smooth'})} className={`rounded-full ${scroll<500?'opacity-0 mt-10':'opacity-100'} z-50 transition-all ease-in-out duration-300 hover:bg-white cursor-pointer fixed bottom-5 border border-red-400 h-10 w-10 flex items-center justify-center right-5`}>
+    <div onClick={()=> window.scrollTo({top:0,behavior:'smooth'})} className={`rounded-full ${scroll<500?'opacity-0 mt-10 hidden':'opacity-100'} z-50 transition-all ease-in-out duration-300 hover:bg-white cursor-pointer fixed bottom-5 border border-red-400 h-10 w-10 flex items-center justify-center right-5`}>
       <ChevronUp height={20} className='stroke-red-400'/>
     </div>
     <div className={`fixed block md:hidden top-0 bottom-0 ${open?'left-0':'-left-60'} bg-black w-[230px] z-50 transition-all ease-in-out duration-300`}>
