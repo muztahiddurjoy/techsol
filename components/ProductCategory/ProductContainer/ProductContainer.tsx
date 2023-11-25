@@ -32,7 +32,7 @@ const ProductContainer = ({id}:{id:string}) => {
   }, [id])
   
   return (
-    <div className='grid grid-cols-1 md:grid-cols-8 my-10 md:px-32 lg:px-40 px-5'>
+    <div className='grid grid-cols-1 md:grid-cols-8 my-10 md:px-32 lg:px-40 px-5 2xl:px-[246px]'>
         <div className="">
             <p className='font-bold text-gray-600 uppercase'>PRODUCTS</p>
             <div className="w-16 my-3 h-[3px] bg-gray-300"></div>

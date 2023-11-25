@@ -26,10 +26,10 @@ const Header = () => {
       
     >
       <SwiperSlide key={0}>
-        <HeaderItem anim={anim==0}/>
+        <HeaderItem bg='/generator.jpg' red='Moner manush nai' image='/special.png' white='Shuvo vai er' anim={anim==0}/>
       </SwiperSlide>
       <SwiperSlide key={1}>
-        <HeaderItem anim={anim==1}/>
+        <HeaderItem bg='/bggen.jpg' red='Shobai Friendzone kore' image='/solar.png' white='Karon Shuvo vai ke' anim={anim==1}/>
       </SwiperSlide>
     </Swiper>
     </div>

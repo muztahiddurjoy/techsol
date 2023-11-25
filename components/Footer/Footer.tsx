@@ -1,12 +1,23 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import Triangle from './Triangle'
 import Image from 'next/image'
 import { generatorsets } from '../Navbar/genetatorSets'
 import {ChevronRight, MapPin,Mail, Phone, Facebook, Instagram, Send} from 'lucide-react'
 import Link from 'next/link'
 import { Separator } from '../ui/separator'
+import { apiurl } from '@/apiurl'
+import axios from 'axios'
+import { CategoryType } from '@/types/types'
 
 const Footer = () => {
+  const [categories, setcategories] = useState<Array<CategoryType>>([])
+  useEffect(() => {
+    axios.get(`${apiurl}/category`).then((res)=>{
+      setcategories(res.data.result)
+    }).catch(err=> console.log(err))
+  }, [])
+  
   return (
     <div className="bg-themeGray mt-10 relative">
       <Triangle/>
@@ -14,22 +25,22 @@ const Footer = () => {
       <div className="absolute bg-[url('/map.png')] bg-cover bg-no-repeat px-5 md:top-44 lg:top-60 2xl:top-80 3xl:top-96 top-20 left-0 md:px-28 2xl:px-[360px] grid grid-cols-1 md:grid-cols-4 md:gap-6" style={{backgroundPositionY:-350}}>
         <div className="">
           <Image src="/white.png" height={170} width={150} alt=''/>
-          <p className="text-sm text-gray-300 mt-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eligendi fugiat voluptatem atque quis modi quae repudiandae sed. Consectetur minima dolores fuga iste dolor ad ut deleniti, est non suscipit.</p>
+          <p className="text-sm text-gray-300 mt-5">Techsol is committed to fairness and honesty in all its dealings. To demonstrate our commitment to ensuring ethical behavior we have put in place industry standard measures.</p>
         </div>
         <div className="md:col-span-2 md:mt-0 mt-10">
           <div className="">
             <p className="font-semibold text-white">Diesel Generator Sets</p>
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10">
             <ul>
-              {generatorsets.map((v,i)=> i<5&&<li className='text-white/80 transition-all ease-in-out hover:text-white text-sm flex items-center py-3 border-b border-gray-350' key={i}>
+              {categories.map((v,i)=> i<5&&<li className='text-white/80 transition-all ease-in-out hover:text-white text-sm flex items-center py-3 border-b border-gray-350' key={i}>
                 <ChevronRight className='stroke-white' height={15}/>
-                <Link href={v.link}>{v.title}</Link>
+                <Link href={v.link}>{v.name}</Link>
               </li>)}
             </ul>
             <ul>
-            {generatorsets.map((v,i)=> i>5&&<li className='text-white/80 transition-all ease-in-out hover:text-white text-sm flex items-center py-3 border-b border-gray-350' key={i}>
+            {categories.map((v,i)=> (i>5&&i<11)&&<li className='text-white/80 transition-all ease-in-out hover:text-white text-sm flex items-center py-3 border-b border-gray-350' key={i}>
                 <ChevronRight className='stroke-white' height={15}/>
-                <Link href={v.link}>{v.title}</Link>
+                <Link href={v.link}>{v.name}</Link>
               </li>)}
             </ul>
             </div>
@@ -42,7 +53,9 @@ const Footer = () => {
             <MapPin height={20} className='stroke-white' />
           </div>
           <div className="col-span-10">
-          <p className='text-sm text-white flex'>Ataturk Mah. Meric Cd. No:1/2B/84 Atasehir-ISTANBUL / TURKEY</p>
+          <p className='text-sm text-white flex'>Ataturk Tower (7th Floor) <br />
+22 Kamal Ataturk Avenue <br />
+Banani, Dhaka-1213, Bangladesh.</p>
           </div>
         </div>
         <div className="grid grid-cols-12 items-center mt-4">
@@ -50,7 +63,7 @@ const Footer = () => {
             <Mail height={20} className='stroke-white' />
           </div>
           <div className="col-span-10">
-          <a href="mailto:info@enmaksanpower.com" className='text-sm text-white flex'>info@enmaksanpower.com</a>
+          <a href="mailto:info@techsolbd.com" className='text-sm text-white flex'>info@techsolbd.com</a>
           </div>
         </div>
         <div className="grid grid-cols-12 items-center mt-4">
@@ -58,7 +71,7 @@ const Footer = () => {
             <Phone height={20} className='stroke-white' />
           </div>
           <div className="col-span-10">
-          <a href="tel:+90 507 812 17 0911 " className='text-sm text-white flex'>+90 507 812 17 0911</a>
+          <a href="tel:+88 02 222274416 - 19" className='text-sm text-white flex'>+88 02 222274416 - 19</a>
           </div>
         </div>
         <div className="flex items-center mt-10 md:mt-0 justify-center md:justify-start">
@@ -79,14 +92,14 @@ const Footer = () => {
         </a>
         </div>
       </div>
-      <div className="text-center md:col-span-4 text-sm text-white mt-10">Copyright © {new Date().getFullYear()} | <a href="">Thor Generator</a></div>
+      <div className="text-center md:col-span-4 text-sm text-white mt-10">Copyright © {new Date().getFullYear()} | <a href="">Techsol</a></div>
       <Separator orientation='horizontal' className='my-5 md:col-span-4'/>
       <div className="md:col-span-2 mb-10">
-        <p className='text-xs text-white text-center md:text-left'>Copyrigt © {new Date().getFullYear()} All rights reserved | Enmaksan</p>
+        <p className='text-xs text-white text-center md:text-left'>Copyrigt © {new Date().getFullYear()} All rights reserved | Techsol</p>
       </div>
-      <div className="md:col-span-2 mb-10 flex md:justify-end justify-center">
+      {/* <div className="md:col-span-2 mb-10 flex md:justify-end justify-center">
         <a href="" className='md:text-right text-xs text-white'>web design</a>
-      </div>
+      </div> */}
       </div>
      
     </div>
