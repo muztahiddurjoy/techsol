@@ -13,6 +13,7 @@ const BrandCarousel = () => {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
       loop={true}
+      className='items-center mt-5'
       autoplay={{
         delay:3000
       }}
@@ -32,25 +33,52 @@ const BrandCarousel = () => {
       }}
     >
       <SwiperSlide>
-        <Image src="/google.png" height={50} width={100} alt=''/>
+        <Image src="/partners/1.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/google.png" height={50} width={100} alt=''/>
+        <Image src="/partners/2.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center' />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/google.png" height={50} width={100} alt=''/>
+        <Image src="/partners/3.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/google.png" height={50} width={100} alt=''/>
+        <Image src="/partners/4.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/google.png" height={50} width={100} alt=''/>
+        <Image src="/partners/5.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/google.png" height={50} width={100} alt=''/>
+        <Image src="/partners/6.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/google.png" height={50} width={100} alt=''/>
+        <Image src="/partners/7.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src="/partners/8.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src="/partners/9.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src="/partners/10.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src="/partners/11.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src="/partners/12.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src="/partners/13.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src="/partners/14.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src="/partners/15.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src="/partners/16.png" height={100} width={100}  alt='' className='h-[70px] w-auto flex items-center justify-center'/>
       </SwiperSlide>
     </Swiper>
   )
