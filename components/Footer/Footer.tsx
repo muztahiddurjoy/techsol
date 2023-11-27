@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
         <div className="md:col-span-2 md:mt-0 mt-10">
           <div className="">
-            <p className="font-semibold text-white">Diesel Generator Sets</p>
+            <p className="font-semibold text-white">Transformers and Switchgears</p>
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10">
             <ul>
               {categories.map((v,i)=> i<5&&<li className='text-white/80 transition-all ease-in-out hover:text-white text-sm flex items-center py-3 border-b border-gray-350' key={i}>
