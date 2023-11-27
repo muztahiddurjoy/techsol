@@ -4,11 +4,19 @@ import React from 'react'
 const SpecialDesc = () => {
   return (
     <div className='my-10 px-5 md:px-20 grid grid-cols-1 md:grid-cols-6 2xl:px-[384px]'>
-        <div className="md:col-span-4 text-gray-600">
-            <p className="mb-5">Becasue of special demands to the installation and application of generator sets onsite, customers need customized generator sets or generator systems, special size, tanks capacity, output power, input and output connections and so on. In all the cases Enmaksan Power amends regular generator sets or designs new sets and power supply systems.</p>
-            <p className="my-5">Throughfull customization of power equipment under special user requests is one of the strong point of Enmaksan Power.</p>
-            <p className="my-5">Enmaksan Power also guarantees synchronization solutions for projects that require several generator sets to be connected in parallel by a modular power system providing a flexible power supply for special missions along with the benefits of redundancy, scalability, and safety。</p>
-            <p className="my-5">Enmaksan Power sets are designed to get small footprints for easily being transported by truck or in containers, streamlining any mission and cutting logistics costs obviously. Meanwhile, the robust weatherproof and soundproof canopies also minimize damage to the generator set and help to work regularly in extreme weather conditions and harsh environments. Optional filters for heavy dusty environments protect the generator in windy areas, sandy deserts, etc.</p>
+        <div className="md:col-span-4 text-gray-600 md:pr-10">
+            <p className='font-semibold text-2xl mt-10'>Power Solutions</p>
+            <p className="mt-3 text-gray-600">In the rapidly evolving world of technology, the demand for reliable and efficient <b>Power solutions</b> has never been greater. At Power Solution, we understand the unique energy needs of businesses and are committed to providing tailored solutions that not only power your operations but also contribute to a sustainable future.</p>
+            <p className='font-semibold text-2xl mt-10'>Power Generation and Distribution</p>
+            <p className="mt-3 text-gray-600">Our comprehensive suite of services includes state-of-the-art power generation and distribution systems. Whether your business requires solar panels, wind turbines, or traditional power generators, we have the expertise to deliver the best solution for your needs.</p>
+            <p className='font-semibold text-2xl mt-10'>Energy Management and Optimization</p>
+            <p className="mt-3 text-gray-600">Beyond power generation, we offer energy management and optimization services to help you maximize your energy efficiency. Our smart grid solutions enable real-time monitoring and control of your energy usage, helping you reduce waste and save on energy costs.</p>
+            <p className='font-semibold text-2xl mt-10'>Sustainable and Eco-friendly Solutions</p>
+            <p className="mt-3 text-gray-600">At Power Solution, we are deeply committed to environmental sustainability. We use advanced technologies and innovative designs that not only reduce your carbon footprint but also result in significant energy cost savings. Our solutions include the use of reduced harmful volatile organic compound paints and biodegradable products in our manufacturing processes.</p>
+            <p className='font-semibold text-2xl mt-10'>Our Commitment</p>
+            <p className="mt-3 text-gray-600">We believe in the power of innovation to create a sustainable future. Our team of dedicated engineers and professionals work tirelessly to deliver reliable and eco-friendly power solutions. We are proud to hold ISO 9001:2008 and ISO 14001:2004 certifications, reflecting our commitment to quality assurance and environmental responsibility.
+<br/> <br/>
+At Power Solution, we're not just providing power solutions; we're powering a brighter, greener future. Contact us today and let's power your future together. </p>
         </div>
         <div className="md:col-span-2">
         <Image src="/maksanOne.png" height={200} width={400} className='w-full' alt=''/>
