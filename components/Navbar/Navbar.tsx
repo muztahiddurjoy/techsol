@@ -176,7 +176,7 @@ const Navbar = () => {
             </li>
         </ul>
         <div className="md:flex hidden items-center">
-        <HoverCard closeDelay={100} openDelay={0}>
+        {/* <HoverCard closeDelay={100} openDelay={0}>
             <HoverCardTrigger><Search className='stroke-white' height={15}/></HoverCardTrigger>
             <HoverCardContent className='mt-3 bg-primary ring-theme/90 text-white'>
                 <div className="grid grid-cols-10">
@@ -188,7 +188,7 @@ const Navbar = () => {
                   </div>
                 </div>
             </HoverCardContent>
-            </HoverCard>
+            </HoverCard> */}
         </div>
         <div className="col-span-3 md:col-span-1 flex justify-end">
         <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60' onClick={e=> setquoteOpen(true)}>Request a Quote</Button>
@@ -235,7 +235,7 @@ const Navbar = () => {
             </li>
         </ul>
         <div className="md:flex hidden items-center">
-        <HoverCard closeDelay={100} openDelay={0}>
+        {/* <HoverCard closeDelay={100} openDelay={0}>
             <HoverCardTrigger><Search className='stroke-gray-600' height={15}/></HoverCardTrigger>
             <HoverCardContent className='mt-3 bg-primary ring-theme/90 text-white'>
                 <div className="grid grid-cols-10">
@@ -247,7 +247,7 @@ const Navbar = () => {
                   </div>
                 </div>
             </HoverCardContent>
-            </HoverCard>
+            </HoverCard> */}
         </div>
         <div className="col-span-3 md:col-span-1 flex justify-end">
         <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60' onClick={e=> setquoteOpen(true)}>Request a Quote</Button>
