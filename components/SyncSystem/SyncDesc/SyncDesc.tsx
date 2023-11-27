@@ -3,12 +3,56 @@ import React from 'react'
 const SyncDesc = () => {
   return (
     <div className='my-10 md:px-20 2xl:px-[384px] px-5 text-gray-600 [&>*]:my-5'>
-      <p className='font-bold'>Synchronization systems can simply be described as utilizing more than one generator set for your high kVA needs. Small generator sets operating in parallel offers all benefcial advantages of a single large generator set.</p>
-      <p>n the investments that predict a fast growth, purchasing a high power generator at establishment period increases the first investment budget. By preferring Enmaksan Power  <b>synchronized</b> systems you can start by purchasing lower power generator which decrease first investment budget. According with the growth rate you can add generator in various numbers and powers which establish a problem free, flexible system</p>
-      <p>Enmaksan Power brings alternative solution to energy projects by using synchronization systems. With combining more than one generator for your high kVA needs, this system provides significant advantages comparing against single generator with same power. Especially the <b>synchronization panel</b> that design by Enmaksan Generator engineers offers integrated solution through costumers with its technology</p>
-      <p>As you can see at above comparative cost graphic the synchronizing systems which gathered from different kVA models bring more advantages both in purchase and also in after sale.</p>
-      <p>We can approach to flexible usage of <b>Enmaksan Generator Synchronization Systems</b> from both logistic and functional point of view.</p>
-      <p>On the contrary of common belief synchronization systems can be synchronized not just in equal powered generators but also in different powered models. As a result of this application a flexible solution is created for changing power at different time of year or different time of day. In a hotel that needs intense power at summer time, is not also going to need same power at winter time. With the synchronization of different powered generators the intense power need of summer cover by high and small generator synchronization the other hand you can use the lowered power single generator according to compensate the power for the off seasons. Thus fuel expenditures and corrosion are minimized. In logical point of view, multiple generator systems create substantial advantages against difficulties of setting up systems with single large generator.</p>
+      <p className='font-bold'>Welcome to Our HVAC Solutions: Creating Comfortable and Healthy Spaces </p>
+<p>
+At Techsol, we specialize in providing top-notch HVAC solutions to ensure optimal comfort and well-being in residential, commercial, and industrial settings. Our comprehensive range of heating, ventilation, and air conditioning services is designed to meet the unique needs of our clients, offering efficient and sustainable solutions.</p>
+<br/> <br />
+<span className='font-bold text-2xl'>Our HVAC Services:</span>
+<ol className='pt-3 list-decimal pl-4'>
+  <li>
+  <span className=' font-semibold'>Heating Solutions:</span>
+  <ul className='pl-3 md:pl-10 list-disc mt-3'>
+    <li>Installation and maintenance of high-efficiency heating systems.</li>
+    <li>Energy-efficient furnaces and boilers to keep your space warm during colder months.</li>
+  </ul>
+  </li>
+
+  <li>
+  <span className=' font-semibold'>Ventilation Systems:</span>
+  <ul className='pl-3 md:pl-10 list-disc mt-3'>
+    <li>Customized ventilation solutions for improved indoor air quality.</li>
+    <li>Installation of state-of-the-art ventilation systems to ensure proper air circulation.</li>
+  </ul>
+  </li>
+
+  <li>
+  <span className=' font-semibold'>Air Conditioning Services:</span>
+  <ul className='pl-3 md:pl-10 list-disc mt-3'>
+    <li>Energy-efficient air conditioning units for optimal cooling performance.</li>
+    <li>Regular maintenance and repairs to keep your AC systems running smoothly.</li>
+  </ul>
+  </li>
+
+  <li>
+  <span className=' font-semibold'>Ductwork and Air Distribution:</span>
+  <ul className='pl-3 md:pl-10 list-disc mt-3'>
+    <li>Design and installation of efficient ductwork systems for even air distribution.</li>
+    <li>Duct cleaning and maintenance services for improved system efficiency.</li>
+  </ul>
+  </li>
+</ol>
+
+<span className='font-semibold'>Smart HVAC Solutions:</span>
+<p className='mt-3'>
+Integration of smart thermostats and controls for remote monitoring and energy savings.
+Implementation of building automation systems for seamless HVAC management.
+Why Choose Techsol for HVAC Solutions:
+<br/>
+Experienced and skilled technicians ensuring quality installation and maintenance.
+Commitment to energy efficiency, reducing environmental impact.
+Customized solutions tailored to the unique requirements of each client.
+Exceptional customer service and support throughout the project lifecycle.
+</p>
     </div>
   )
 }

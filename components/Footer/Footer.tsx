@@ -98,7 +98,7 @@ Banani, Dhaka-1213, Bangladesh.</p>
         <p className='text-xs text-white text-center md:text-left'>Copyrigt © {new Date().getFullYear()} All rights reserved | Techsol</p>
       </div>
       <div className="md:col-span-2 mb-10 flex md:justify-end justify-center">
-        <a href="https://intredia.com/" className='md:text-right text-xs text-white'>Itredia</a>
+        <a href="https://intredia.com/" className='md:text-right text-xs text-white'>Web Design</a>
       </div>
       </div>
      
