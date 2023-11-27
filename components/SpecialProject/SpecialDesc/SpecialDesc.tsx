@@ -12,7 +12,6 @@ const SpecialDesc = () => {
         </div>
         <div className="md:col-span-2">
         <Image src="/maksanOne.png" height={200} width={400} className='w-full' alt=''/>
-        <Image src="/maksanTwo.jpg" height={200} width={400} className='w-full' alt=''/>
         </div>
 
     </div>
