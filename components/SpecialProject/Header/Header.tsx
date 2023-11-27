@@ -16,7 +16,7 @@ const Header = () => {
     <div className="h-[90vh] 2xl:h-[65vh] w-full relative bg-[url('/generator.jpg')] bg-cover" style={{backgroundPositionY:scroll*0.5}}>
         <div className="bg-black/80 2xl:px-[384px] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center md:justify-start px-5 md:px-20">
             <p className='text-white text-center md:text-left uppercase font-bold text-4xl pb-10 md:pb-0 lg:text-6xl'><span className='text-primary'>
-SPECIAL</span> <br />Project</p>
+Power</span> <br />Solution</p>
         </div>
         <div className="rotate-180 bottom-0 absolute left-0 right-0 -mb-0.5">
             <Triangle/>

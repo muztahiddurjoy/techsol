@@ -163,10 +163,10 @@ const Navbar = () => {
             </HoverCard>
             </li>
             <li>
-                <Link href="/synchronization-system">SYNCHRON SYSTEM</Link>
+                <Link href="/hvac-solution">HVAC Solution</Link>
             </li>
             <li>
-                <Link href="/special-project">Special Project</Link>
+                <Link href="/power-solution">Power Solution</Link>
             </li>
             <li>
                 <Link href="/solar">Solar</Link>
@@ -222,10 +222,10 @@ const Navbar = () => {
             </HoverCard>
             </li>
             <li>
-                <Link href="/synchronization-system">SYNCHRON SYSTEM</Link>
+                <Link href="/hvac-solution">HVAC Solution</Link>
             </li>
             <li>
-                <Link href="/special-project">Special Project</Link>
+                <Link href="/power-solution">Power Solution</Link>
             </li>
             <li>
                 <Link href="/solar">Solar</Link>
@@ -283,11 +283,11 @@ const Navbar = () => {
           <Separator orientation='horizontal' className='bg-gray-500 my-4'/>
         </li>
         <li>
-          <Link href="/synchronization-system" className='p-3'>SYNCHRON SYSTEM</Link>
+          <Link href="/hvac-solution" className='p-3'>HVAC Solution</Link>
           <Separator orientation='horizontal' className='bg-gray-500 my-4'/>
         </li>
         <li>
-          <Link href="/special-project" className='p-3'>Special Project</Link>
+          <Link href="/power-solution" className='p-3'>Power Solution</Link>
           <Separator orientation='horizontal' className='bg-gray-500 my-4'/>
         </li>
         <li>
