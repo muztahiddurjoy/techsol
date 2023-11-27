@@ -184,7 +184,7 @@ const Navbar = () => {
                     <Input value={search} onChange={e=> setsearch(e.target.value)} placeholder='Search...' className='bg-white border-white text-black'/>
                   </div>
                   <div className="col-span-2 bg-primary">
-                    <Button className='bg-red-800 hover:bg-red-900'><Search height={15} className='stroke-white'/></Button>
+                    <Button className='bg-blue-800 hover:bg-blue-900'><Search height={15} className='stroke-white'/></Button>
                   </div>
                 </div>
             </HoverCardContent>
@@ -243,7 +243,7 @@ const Navbar = () => {
                     <Input value={search} onChange={e=> setsearch(e.target.value)} placeholder='Search...' className='bg-white border-white text-black'/>
                   </div>
                   <div className="col-span-2 bg-primary">
-                    <Button className='bg-red-800 hover:bg-red-900'><Search height={15} className='stroke-white'/></Button>
+                    <Button className='bg-blue-800 hover:bg-blue-900'><Search height={15} className='stroke-white'/></Button>
                   </div>
                 </div>
             </HoverCardContent>
@@ -253,8 +253,8 @@ const Navbar = () => {
         <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60' onClick={e=> setquoteOpen(true)}>Request a Quote</Button>
         </div>
     </div>
-    <div onClick={()=> window.scrollTo({top:0,behavior:'smooth'})} className={`rounded-full ${scroll<500?'opacity-0 mt-10 hidden':'opacity-100'} z-50 transition-all ease-in-out duration-300 hover:bg-white cursor-pointer fixed bottom-5 border border-red-400 h-10 w-10 flex items-center justify-center right-5`}>
-      <ChevronUp height={20} className='stroke-red-400'/>
+    <div onClick={()=> window.scrollTo({top:0,behavior:'smooth'})} className={`rounded-full ${scroll<500?'opacity-0 mt-10 hidden':'opacity-100'} z-50 transition-all ease-in-out duration-300 hover:bg-white cursor-pointer fixed bottom-5 border border-blue-400 h-10 w-10 flex items-center justify-center right-5`}>
+      <ChevronUp height={20} className='stroke-blue-400'/>
     </div>
     <div className={`fixed block md:hidden top-0 bottom-0 ${open?'left-0':'-left-60'} bg-black w-[230px] z-50 transition-all ease-in-out duration-300`}>
       <X className='absolute right-3 top-3 stroke-white' onClick={e=> setopen(false)}/>
