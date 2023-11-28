@@ -19,6 +19,7 @@ const Header = () => {
       autoplay={{
         delay:3000
       }}
+      className='p-0'
       touchEventsTarget='wrapper'
       navigation={true} 
       allowTouchMove={false}
