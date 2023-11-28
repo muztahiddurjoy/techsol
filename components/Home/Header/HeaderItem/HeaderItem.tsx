@@ -8,7 +8,7 @@ const HeaderItem = ({anim,bg,image,red,white}:{anim:boolean,white:string,bg:stri
         <Image src={bg} height={600} width={1000} alt='' className='absolute top-0 right-0 bottom-0 left-0 h-full object-cover w-full'/>
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70"></div>
         <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center px-5 md:px-10 z-30">
-            <p className={`text-4xl md:text-5xl 2xl:text-6xl xl:w-[500px] 2xl:w-[750px] uppercase font-bold transition-all ease-in-out duration-1500 ${anim?'ml-5 2xl:ml-64 opacity-100':'-ml-10 opacity-0'} text-white`}>{white} <br /> <span className='text-primary'>{red}</span></p>
+            <p className={`text-4xl md:text-5xl 2xl:text-6xl xl:w-[600px] 2xl:w-[750px] uppercase font-bold transition-all ease-in-out duration-1500 ${anim?'ml-5 2xl:ml-64 opacity-100':'-ml-10 opacity-0'} text-white`}>{white} <br /> <span className='text-primary'>{red}</span></p>
         </div>
         
         <div className={`absolute h-[33vh] left-0 bottom-0 right-0 bg-gradient-to-t 2xl:bg-gradient-to-t from-white to-transparent`}>

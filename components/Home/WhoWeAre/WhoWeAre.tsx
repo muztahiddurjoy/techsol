@@ -5,7 +5,7 @@ import { ExternalLink } from 'lucide-react'
 
 const WhoWeAre = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 md:px-20 xl:px-60 px-3 md:py-20 py-10 2xl:px-[564px]'>
+    <div className='grid grid-cols-1 md:grid-cols-2 md:px-20 xl:px-20 px-3 md:py-20 py-10 2xl:px-[364px]'>
         <GridContainer image='/enviromen.jpg' link='/compnay-profile' title="Who we are"  text='A pioneer in manufacturing products, providing solutions and services.'/>
         <GridContainer image='/EPC.jpg' title="What we do"  text='We design and manufacture customised products and provide reliable solutions and services. We provide solutions for modernisation of old designs and technologies.'/>
         <div className="bg-[url('/globe2.jpg')] bg-cover p-10 min-h-[270px] relative md:col-span-2 mt-5 mx-3">
