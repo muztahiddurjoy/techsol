@@ -19,10 +19,10 @@ const Footer = () => {
   }, [])
   
   return (
-    <div className="bg-[#646569] mt-10 relative bg-[url('/map.png')] bg-contain bg-no-repeat overflow-hidden" style={{backgroundPositionY:200}}>
+    <div className="bg-[#646569] mt-10 relative h-[1000px] md:h-[650px] lg:h-auto bg-[url('/map.png')] md:bg-contain bg-center bg-no-repeat overflow-hidden" style={{backgroundPositionY:200}}>
       <Triangle/>
       
-      <div className="absolute px-5 md:top-44 lg:top-[200px] 2xl:top-80 3xl:top-96 2xl:px-[260px] top-20 left-0 md:px-28  grid grid-cols-1 md:grid-cols-4 md:gap-6" >
+      <div className="absolute px-5 md:top-44 lg:top-[200px] 2xl:top-80 3xl:top-96 2xl:px-[260px] top-20 sm:top-32 left-0 md:px-28  grid grid-cols-1 md:grid-cols-4 md:gap-6" >
         <div className="">
           <Image src="/white.png" height={170} width={150} alt=''/>
           <p className="text-sm text-gray-300 mt-5">Techsol is committed to fairness and honesty in all its dealings. To demonstrate our commitment to ensuring ethical behavior we have put in place industry standard measures.</p>

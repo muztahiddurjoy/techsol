@@ -135,14 +135,14 @@ const Navbar = () => {
     
   return (
     <>
-    <div className='absolute top-0 right-0 left-0 grid md:flex grid-cols-7 xl:justify-center items-center md:px-20 md:py-10 px-3 py-3 z-40'>
-      <div className="block md:hidden" onClick={e=> setopen(true)}>
+    <div className='absolute top-0 right-0 left-0 grid lg:flex grid-cols-7 xl:justify-center items-center md:px-10 md:py-10 px-3 py-3 z-40'>
+      <div className="block lg:hidden" onClick={e=> setopen(true)}>
         <Menu className='stroke-white'/>
       </div>
-      <div className="col-span-3 md:col-span-1 flex items-center justify-start md:justify-start">
-        <Link href="/" className='md:pl-0'><Image alt='Techsol' height={70} width={150} src="/white.png"/></Link>
+      <div className="col-span-3 lg:col-span-1 flex items-center justify-start md:justify-start">
+        <Link href="/" className='lg:pl-0'><Image alt='Techsol' height={70} width={150} src="/white.png"/></Link>
       </div>
-        <ul className='md:flex items-center hidden text-xs uppercase font-medium text-white [&>*]:px-3 [&>*]:border-r [&>*]:border-gray-300 px-4 md:px-10'>
+        <ul className='lg:flex items-center hidden text-xs uppercase font-medium text-white [&>*]:px-3 [&>*]:border-r [&>*]:border-gray-300 px-4 lg:px-10'>
             <li>
               <Link href="/">Home</Link>
             </li>
@@ -190,18 +190,18 @@ const Navbar = () => {
             </HoverCardContent>
             </HoverCard> */}
         </div>
-        <div className="col-span-3 md:col-span-1 flex justify-end">
+        <div className="col-span-3 md:col-span-2 flex justify-end">
         <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60' onClick={e=> setquoteOpen(true)}>Request a Quote</Button>
         </div>
     </div>
-    <div className={`fixed bg-white transition-all ease-in-out duration-300 ${scroll>300&&'top-0 opacity-100'} ${scroll<50?'md:py-10 opacity-0 -z-10':'md:py-2 z-40'} right-0 left-0 grid md:flex xl:justify-center grid-cols-7 items-center md:px-20  px-3 py-3`}>
-      <div className="block md:hidden" onClick={e=> setopen(true)}>
+    <div className={`fixed bg-white transition-all ease-in-out duration-300 ${scroll>300&&'top-0 opacity-100'} ${scroll<50?'md:py-10 opacity-0 -z-10':'md:py-2 z-40'} right-0 left-0 grid lg:flex xl:justify-center grid-cols-7 items-center md:px-10  px-3 py-3`}>
+      <div className="block lg:hidden" onClick={e=> setopen(true)}>
         <Menu className='stroke-black'/>
       </div>
-      <div className="col-span-3 md:col-span-1 flex items-center justify-start md:justify-start">
-        <Link href="/" className='pl-0 md:pl-0'><Image alt='Maskan' height={70} width={150} src="/logo.png"/></Link>
+      <div className="col-span-3 lg:col-span-1 flex items-center justify-start lg:justify-start">
+        <Link href="/" className='pl-0'><Image alt='Maskan' height={70} width={150} src="/logo.png"/></Link>
       </div>
-        <ul className='md:flex items-center hidden text-xs uppercase font-medium text-gray-600 [&>*]:px-3 [&>*]:border-r [&>*]:border-gray-600 px-4 md:px-10'>
+        <ul className='lg:flex items-center hidden text-xs uppercase font-medium text-gray-600 [&>*]:px-3 [&>*]:border-r [&>*]:border-gray-600 px-4 lg:px-10'>
             <li>
               <Link href="/">Home</Link>
             </li>
@@ -249,14 +249,14 @@ const Navbar = () => {
             </HoverCardContent>
             </HoverCard> */}
         </div>
-        <div className="col-span-3 md:col-span-1 flex justify-end">
+        <div className="col-span-3 md:col-span-2 flex justify-end">
         <Button size="sm" className='ml-3 rounded-full border-2 border-primary hover:bg-primary/60' onClick={e=> setquoteOpen(true)}>Request a Quote</Button>
         </div>
     </div>
     <div onClick={()=> window.scrollTo({top:0,behavior:'smooth'})} className={`rounded-full ${scroll<500?'opacity-0 mt-10 hidden':'opacity-100'} z-50 transition-all ease-in-out duration-300 hover:bg-white cursor-pointer fixed bottom-5 border border-blue-400 h-10 w-10 flex items-center justify-center right-5`}>
       <ChevronUp height={20} className='stroke-blue-400'/>
     </div>
-    <div className={`fixed block md:hidden top-0 bottom-0 ${open?'left-0':'-left-60'} bg-black w-[230px] z-50 transition-all ease-in-out duration-300`}>
+    <div className={`fixed block lg:hidden top-0 bottom-0 ${open?'left-0':'-left-60'} bg-black w-[230px] z-50 transition-all ease-in-out duration-300`}>
       <X className='absolute right-3 top-3 stroke-white' onClick={e=> setopen(false)}/>
       <ul className='pt-14 text-white font-semibold text-sm uppercase'>
         <li>
@@ -273,8 +273,8 @@ const Navbar = () => {
             <AccordionTrigger>Product Category</AccordionTrigger>
             <AccordionContent>
               <ul className='text-xs pl-5 mt-5'>
-                {generatorsets.map((v,i)=> <li key={i} className='my-2'>
-                  <Link href={v.link}>{v.title}</Link>
+                {categories.map((v,i)=> <li key={i} className='my-2'>
+                  <Link href={v.link}>{v.name}</Link>
                 </li>)}
               </ul>
             </AccordionContent>
