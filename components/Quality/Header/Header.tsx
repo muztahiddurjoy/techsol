@@ -13,7 +13,7 @@ const Header = () => {
     }
     }, [])
   return (
-    <div className="h-[90vh] 2xl:h-[65vh] w-full relative bg-[url('/globe1.jpg')] bg-cover" style={{backgroundPositionY:scroll*0.5}}>
+    <div className="h-[90vh] 2xl:h-[65vh] w-full relative bg-[url('/moner_manush.jpg')] bg-cover" style={{backgroundPositionY:scroll*0.5}}>
         <div className="bg-black/80 absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center px-5 md:px-20">
             <p className='text-white text-center uppercase font-bold text-4xl xl:text-5xl 2xl:text-6xl'>Quality</p>
         </div>
