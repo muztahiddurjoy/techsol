@@ -40,7 +40,7 @@ const Footer = () => {
             <ul>
             {categories.map((v,i)=> (i>5&&i<11)&&<li className='text-white/80 transition-all ease-in-out hover:text-white text-sm flex items-center py-3 border-b border-gray-350' key={i}>
                 <ChevronRight className='stroke-white' height={15}/>
-                <Link href={v.link}>{v.name}</Link>
+                <Link href={`/product-category/${v.id}`}>{v.name}</Link>
               </li>)}
             </ul>
             </div>

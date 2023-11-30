@@ -13,7 +13,7 @@ const InfoSecond = () => {
                 <BrandCarousel/>
             </div>
         </div>
-        <div className="col-span-5 relative flex items-center justify-center">
+        <div className="col-span-5 relative flex items-center justify-center h-[300px] mt-10 md:mt-0 md:h-auto">
           <p className='z-30 text-white font-extrabold text-2xl md:text-3xl text-center uppercase 2xl:text-3xl'>Export All Over The <br /> <span className='text-primary'>World</span></p>
           <div className="top-0 bottom-0 right-0 left-0 h-full w-full absolute z-20 bg-black/60"></div>
             <Image height={600} width={1000} src="/globe.jpg" alt='' className='top-0 left-0 h-full w-full object-cover right-0 bottom-0 absolute'/>
